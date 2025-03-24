@@ -991,7 +991,7 @@ a {
 
       .option input[type="checkbox"]:checked::after {
         content: "";
-        background: url("/public/images/check-mark.svg");
+        background: url("../public/images/check-mark.svg");
         background-size: 75%;
         background-repeat: no-repeat;
         background-position: center center;
@@ -1101,7 +1101,7 @@ a {
 
       .option input[type="checkbox"]:checked::after {
         content: "";
-        background: url("/public/images/check-mark.svg");
+        background: url("../public/images/check-mark.svg");
         background-size: 75%;
         background-repeat: no-repeat;
         background-position: center center;
@@ -1623,7 +1623,7 @@ a {
 
     .option input[type="checkbox"]:checked::after {
       content: "";
-      background: url("/public/images/check-mark.svg");
+      background: url("../public/images/check-mark.svg");
       background-size: 75%;
       background-repeat: no-repeat;
       background-position: center center;
