@@ -1268,6 +1268,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+
+    tr {
+      transition: all 160ms ease-in-out;
+    }
+    tr:hover:not(:has(th)) {
+      background: rgba(69, 110, 235, 0.05);
+    }
   }
 
   .table-heading {
@@ -1324,7 +1331,7 @@ a {
     }
 
     &:nth-child(even) {
-      background: var(--white-2p);
+      background: var(--bgUtilitiesHighlight);
     }
   }
 
@@ -2588,7 +2595,7 @@ a {
   }
 
   tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: var(--bgUtilitiesHighlight);
   }
 
   tbody tr:nth-child(odd) {
