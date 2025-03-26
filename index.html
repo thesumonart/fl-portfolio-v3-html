@@ -1249,7 +1249,7 @@
 
             <!-- Wallets Dropdown button -->
 
-            <button class="history-button">
+            <button id="tradeHistoryBtn" class="history-button">
               <img src="./public/images/history-icon.svg" alt="History-icon" />
             </button>
             <button class="resize-button">
@@ -1381,10 +1381,13 @@
                     <div class="price-impact-wrapper">
                       &#40;Price Impact ≈
                       <span class="price-impact">6%&#41;</span>
-                      <img
-                        src="./public/images/Info-icon.svg"
-                        alt="info-icon"
-                      />
+                      <span class="price-impact-icon">
+                        <span class="price-impact-tooltip">Price Impact</span>
+                        <img
+                          src="./public/images/Info-icon.svg"
+                          alt="info-icon"
+                        />
+                      </span>
                     </div>
                   </div>
                   <div class="quick-buy-n-slippage">
@@ -1447,7 +1450,8 @@
               </div>
               <p class="price-impact">
                 Price Impact
-                <span class="info-icon">
+                <span class="info-icon price-impact-icon">
+                  <span class="price-impact-tooltip">Price Impact</span>
                   <img src="./public/images/Info-icon.svg" alt="Info-icon" />
                 </span>
                 <span class="impact-percent">0 XRP (0.0%)</span>

@@ -1,17 +1,26 @@
 // Table Multiple wallet Open Close
 
-let multiWallet = document.getElementsByClassName("multi-wallet");
-function toggleContent(element) {
-  const subContent = element.closest(".row-content").nextElementSibling;
-  subContent.classList.toggle("visible");
+// let multiWallet = document.getElementsByClassName("multi-wallet");
+// function toggleContent(element) {
+//   const subContent = element.closest(".row-content").nextElementSibling;
+//   subContent.classList.toggle("visible");
 
-  const icon = element.querySelector(".down-arrow-icon");
-}
-Array.from(multiWallet).forEach((wallet) => {
-  wallet.addEventListener("click", function () {
-    toggleContent(this);
-  });
-});
+//   const icons = element.querySelectorAll(".down-arrow-icon");
+
+//   icons.forEach((icon) => {
+//     if (subContent.classList.contains("visible")) {
+//       icon.style.transform = "rotate(180deg)";
+//     } else {
+//       icon.style.transform = "rotate(0deg)";
+//     }
+//   });
+// }
+
+// Array.from(multiWallet).forEach((wallet) => {
+//   wallet.addEventListener("click", function () {
+//     toggleContent(this);
+//   });
+// });
 
 // NavBar
 
@@ -278,6 +287,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     receivingLabelText.innerHTML = "To Receive";
     receivingLabelText.style.color = "";
+
+    slippageInput.value = "";
   }
 
   function closeModal() {
@@ -515,6 +526,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  const slippageInput = document.querySelector(".slippage-input");
+
+  slippageInput.addEventListener("blur", function () {
+    let value = this.value.trim();
+
+    // Check if the value is a valid number and doesn't already have a percentage
+    if (value !== "" && !value.includes("%")) {
+      this.value = value + "%";
+    }
+  });
+
+  slippageInput.addEventListener("focus", function () {
+    // Remove % sign when editing
+    this.value = this.value.replace("%", "");
+  });
+
   // Close dropdown when clicking outside
   document.addEventListener("click", function (event) {
     if (
@@ -530,6 +557,72 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+  // Function to toggle sub-wallet visibility and rotate the arrow icon
+  function toggleSubWallets(tr) {
+    const subWalletsWrapper = tr.querySelector(".sub-wallets-wrapper");
+    const downArrowIcon = tr.querySelector(".down-arrow-icon");
+
+    if (subWalletsWrapper) {
+      // Toggle visibility of the sub-wallet
+      subWalletsWrapper.classList.toggle("visible");
+
+      // Rotate the arrow icon based on visibility
+      if (subWalletsWrapper.classList.contains("visible")) {
+        downArrowIcon.style.transform = "rotate(180deg)";
+      } else {
+        downArrowIcon.style.transform = "rotate(0deg)";
+      }
+    }
+  }
+
+  // Set up event listeners for both mobile and desktop interactions
+  function setupInteractions() {
+    const isMobile = window.innerWidth < 420;
+
+    // For screens smaller than 420px (mobile), allow both <tr> and .multi-wallet clicks
+    if (isMobile) {
+      document.querySelectorAll("tr").forEach((tr) => {
+        tr.addEventListener("click", function (event) {
+          // Handle <tr> row click for toggling sub-wallets
+          const subWalletsWrapper = this.querySelector(".sub-wallets-wrapper");
+          if (subWalletsWrapper) {
+            toggleSubWallets(this);
+          } else {
+            // Open trade modal if no sub-wallet exists
+            openModal();
+          }
+        });
+      });
+    } else {
+      // For screens wider than 420px, remove <tr> event listeners
+      document.querySelectorAll("tr").forEach((tr) => {
+        tr.removeEventListener("click", function () {});
+      });
+    }
+
+    // Attach event listener to .multi-wallet for both mobile and desktop
+    document.querySelectorAll(".multi-wallet").forEach((multiWallet) => {
+      multiWallet.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent triggering row click event
+        toggleSubWallets(this.closest("tr"));
+      });
+    });
+
+    // Attach event listener to .sub-wallet for opening the modal
+    document.querySelectorAll(".sub-wallet").forEach((subWallet) => {
+      subWallet.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent triggering row click event
+        openModal(); // Open the modal when clicking on .sub-wallet
+      });
+    });
+  }
+
+  // Call the function to set up interactions
+  setupInteractions();
+
+  // Recheck on window resize (to ensure proper behavior when resizing the window)
+  window.addEventListener("resize", setupInteractions);
 
   // Initialize with buy mode
   setMode("buy");
@@ -577,12 +670,14 @@ document.querySelectorAll(".close-share-modal").forEach((closeModalBtn) => {
 const historyModal = document.querySelector(".history-modal-overlay");
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".tx-history-button").forEach((openModalButton) => {
-    openModalButton.addEventListener("click", () => {
-      historyModal.style.display = "flex";
-      document.body.style.overflow = "hidden";
+  document
+    .querySelectorAll(".tx-history-button, #tradeHistoryBtn")
+    .forEach((openModalButton) => {
+      openModalButton.addEventListener("click", () => {
+        historyModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      });
     });
-  });
 });
 
 document.querySelectorAll(".close-button").forEach((closeModalBtn) => {
