@@ -1277,6 +1277,9 @@ a {
   height: calc(100vh - 405px);
   overflow-y: auto;
 
+  @media (max-width: 390px) {
+    height: calc(100vh - 445px);
+  }
   @media (max-width: 420px) {
     height: calc(100vh - 415px);
   }
