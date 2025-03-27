@@ -6,6 +6,16 @@
     <link rel="icon" type="image/x-icon" href="./public/images/fl-logo.svg" />
     <title>FL - Portfolio</title>
     <link rel="stylesheet" href="./styles/global.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
   </head>
 
   <body>
@@ -126,135 +136,258 @@
               </button>
             </div>
 
-            <marquee class="marquee" direction="left" loop="">
-              <div class="watchlist-items-wrapper">
-                <div class="watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
+            <div class="watchlist-items-wrapper watchlist-slider">
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
                     <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
                     />
                   </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
                 </div>
-
-                <div class="watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
               </div>
-            </marquee>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+
+              <div class="watchlist-item">
+                <div class="watchlist-item-content">
+                  <figure class="token-icon">
+                    <img
+                      src="./public/images/token-icon.svg"
+                      alt="Token-icon"
+                    />
+                  </figure>
+                  <p class="token-name">Token</p>
+                  <p class="token-price">$00.00K</p>
+                  <p class="token-increment">+000.0%</p>
+                </div>
+                <figure class="close-icon-wrapper">
+                  <img
+                    class="close-icon"
+                    src="./public/images/close-icon-red.svg"
+                    alt="Close-icon"
+                  />
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1779,5 +1912,39 @@
     </main>
 
     <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var slider = $(".watchlist-slider");
+
+        slider.slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 0,
+          speed: 4000,
+          infinite: true,
+          cssEase: "linear",
+          pauseOnHover: false,
+          draggable: true,
+          arrows: false,
+          dots: false,
+          variableWidth: true,
+        });
+
+        $(".watchlist-slider").on("mouseenter", function () {
+          $(".slick-track").css("transition", "none");
+          slider.slick("slickPause");
+        });
+
+        $(".watchlist-slider").on("mouseleave", function () {
+          $(".slick-track").css("transition", "transform 3s linear");
+          slider.slick("slickPlay");
+        });
+      });
+    </script>
   </body>
 </html>
