@@ -520,7 +520,7 @@ a {
 }
 
 .watchlist-item {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 4px;
   width: max-content;
