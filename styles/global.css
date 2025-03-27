@@ -601,8 +601,11 @@ a {
   padding: 16px 12px;
   border-bottom: 0.5px solid var(--borderDefaultPrimary);
 
-  @media (max-width: 420px) {
-    padding: 12px;
+  @media (min-width: 693px) and (max-width: 1440px) {
+    padding: 16px 24px;
+  }
+  @media (max-width: 692px) {
+    padding: 16px 12px;
   }
 }
 .portfolio-header-content-wrapper {
@@ -652,6 +655,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media (max-width: 420px) {
+      padding-bottom: 0;
+    }
 
     .stats-card {
       display: flex;
@@ -848,13 +855,6 @@ a {
 }
 
 @media (max-width: 1420px) {
-  .table-section {
-    tr {
-      padding-left: 12px !important;
-      padding-right: 12px !important;
-    }
-  }
-
   .balance {
     font-size: 20px;
   }
@@ -892,6 +892,7 @@ a {
     align-items: center;
     gap: 16px;
     width: 100%;
+    white-space: nowrap;
 
     .control-button {
       height: 32px;
@@ -1040,11 +1041,8 @@ a {
       }
 
       @media (max-width: 692px) {
-        height: 40px !important;
-        max-width: 110px;
-        gap: 8px;
-        padding: 8px;
-        justify-content: center;
+        height: 32px;
+        width: fit-content;
       }
     }
 
@@ -1170,7 +1168,7 @@ a {
     /* Wallets Dropdown button */
 
     .refresh-button {
-      height: 40px;
+      height: 32px;
       aspect-ratio: 1;
       display: none;
       align-items: center;
@@ -1182,6 +1180,10 @@ a {
       color: var(--textDefaultPrimary);
       cursor: pointer;
       transition: all 0.3s ease;
+
+      img {
+        width: 16px;
+      }
 
       &:hover {
         background: var(--bgDefaultSecondary);
@@ -1228,11 +1230,10 @@ a {
       border-bottom-right-radius: 9999px;
     }
   }
-
-  @media (max-width: 1420px) {
-    padding: 20px 12px;
+  @media (min-width: 693px) and (max-width: 1440px) {
+    padding: 16px 24px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 692px) {
     padding: 16px 12px;
   }
 }
@@ -1279,8 +1280,14 @@ a {
   @media (max-width: 420px) {
     height: calc(100vh - 415px);
   }
-  @media (min-width: 421px) and (max-width: 692px) {
-    height: calc(100vh - 490px);
+  @media (min-width: 421px) and (max-width: 599px) {
+    height: calc(100vh - 470px);
+  }
+  @media (min-width: 600px) and (max-width: 692px) {
+    height: calc(100vh - 480px);
+  }
+  @media (min-width: 693px) and (max-width: 768px) {
+    height: calc(100vh - 518px);
   }
 
   &::-webkit-scrollbar {
@@ -1333,7 +1340,7 @@ a {
 
   .table-heading {
     display: grid;
-    padding: 16px calc((100vw - 1420px) / 2);
+    padding: 7.5px calc((100vw - 1420px) / 2);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 0.5px solid var(--borderDefaultPrimary);
 
@@ -1365,9 +1372,17 @@ a {
         padding-right: 16px;
       }
     }
+
+    @media (min-width: 693px) and (max-width: 1440px) {
+      padding: 7.5px 24px;
+    }
+    @media (max-width: 692px) {
+      padding: 7.5px 12px;
+    }
   }
   .table-row-wrapper {
     border-bottom: 0.5px solid var(--borderDefaultPrimary);
+
     &:nth-child(odd) {
       background: transparent;
     }
@@ -1378,7 +1393,7 @@ a {
   }
 
   .table-row {
-    padding: 7px calc((100% - 1420px) / 2);
+    padding: 9px calc((100% - 1420px) / 2);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
@@ -1393,6 +1408,13 @@ a {
           display: none;
         }
       }
+    }
+
+    @media (min-width: 693px) and (max-width: 1440px) {
+      padding: 9px 24px;
+    }
+    @media (max-width: 692px) {
+      padding: 9px 12px;
     }
   }
 
