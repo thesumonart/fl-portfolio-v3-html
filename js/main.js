@@ -1,26 +1,35 @@
-// Table Multiple wallet Open Close
+// Watchlist slider
 
-// let multiWallet = document.getElementsByClassName("multi-wallet");
-// function toggleContent(element) {
-//   const subContent = element.closest(".row-content").nextElementSibling;
-//   subContent.classList.toggle("visible");
+$(document).ready(function () {
+  var slider = $(".watchlist-slider");
 
-//   const icons = element.querySelectorAll(".down-arrow-icon");
+  slider.slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 4000,
+    infinite: true,
+    cssEase: "linear",
+    pauseOnHover: false,
+    draggable: true,
+    arrows: false,
+    dots: false,
+    variableWidth: true,
+  });
 
-//   icons.forEach((icon) => {
-//     if (subContent.classList.contains("visible")) {
-//       icon.style.transform = "rotate(180deg)";
-//     } else {
-//       icon.style.transform = "rotate(0deg)";
-//     }
-//   });
-// }
+  $(".watchlist-slider").on("mouseenter", function () {
+    $(".slick-track").css("transition", "none");
+    slider.slick("slickPause");
+  });
 
-// Array.from(multiWallet).forEach((wallet) => {
-//   wallet.addEventListener("click", function () {
-//     toggleContent(this);
-//   });
-// });
+  $(".watchlist-slider").on("mouseleave", function () {
+    $(".slick-track").css("transition", "transform 3s linear");
+    slider.slick("slickPlay");
+  });
+});
+
+// Watchlist slider
 
 // NavBar
 
@@ -579,10 +588,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set up event listeners for both mobile and desktop interactions
   function setupInteractions() {
     const isMobile = window.innerWidth < 420;
-
     // For screens smaller than 420px (mobile), allow both <tr> and .multi-wallet clicks
     if (isMobile) {
-      document.querySelectorAll("tr").forEach((tr) => {
+      document.querySelectorAll(".table-row-wrapper").forEach((tr) => {
         tr.addEventListener("click", function (event) {
           // Handle <tr> row click for toggling sub-wallets
           const subWalletsWrapper = this.querySelector(".sub-wallets-wrapper");
@@ -605,24 +613,23 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".multi-wallet").forEach((multiWallet) => {
       multiWallet.addEventListener("click", function (event) {
         event.stopPropagation(); // Prevent triggering row click event
-        toggleSubWallets(this.closest("tr"));
+        toggleSubWallets(this.closest(".table-row-wrapper"));
       });
     });
 
-    // Attach event listener to .sub-wallet for opening the modal
-    document.querySelectorAll(".sub-wallet").forEach((subWallet) => {
-      subWallet.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent triggering row click event
-        openModal(); // Open the modal when clicking on .sub-wallet
+    if (isMobile) {
+      // Attach event listener to .sub-wallet for opening the modal
+      document.querySelectorAll(".sub-wallet").forEach((subWallet) => {
+        subWallet.addEventListener("click", function (event) {
+          event.stopPropagation(); // Prevent triggering row click event
+          openModal(); // Open the modal when clicking on .sub-wallet
+        });
       });
-    });
+    }
   }
 
   // Call the function to set up interactions
   setupInteractions();
-
-  // Recheck on window resize (to ensure proper behavior when resizing the window)
-  window.addEventListener("resize", setupInteractions);
 
   // Initialize with buy mode
   setMode("buy");

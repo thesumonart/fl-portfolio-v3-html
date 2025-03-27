@@ -677,649 +677,617 @@
           <div class="table-section">
             <div class="table-content-wrapper">
               <div class="table-scroll">
-                <table class="table">
-                  <thead>
-                    <tr class="table-heading">
-                      <th>TOKEN</th>
-                      <th>WALLET</th>
-                      <th>BOUGHT</th>
-                      <th>SOLD</th>
-                      <th>REMAINING</th>
-                      <th>PnL</th>
-                      <th>ACTION</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                <div class="table">
+                  <div>
+                    <div class="table-heading">
+                      <span>TOKEN</span>
+                      <span>WALLET</span>
+                      <span>BOUGHT</span>
+                      <span>SOLD</span>
+                      <span>REMAINING</span>
+                      <span>PnL</span>
+                      <span>ACTION</span>
+                    </div>
+                  </div>
+                  <div class="table-body">
                     <!-- Single Row -->
 
-                    <tr>
-                      <td>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
                         <div class="token-cell">
                           <img
                             class="token-icon"
-                            src="./public/images/avatar-icon.svg"
+                            src="./public/images/token-icon.svg"
                             alt="Token-icon"
                           />
                           <span>TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="multi-wallet wallet-name">
-                              Multi (3)
+                        <div class="multi-wallet wallet-name">
+                          Multi (3)
+                          <img
+                            class="down-arrow-icon"
+                            src="./public/images/down-arrow.svg"
+                            alt="Down-arrow-icon"
+                          />
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
                               <img
-                                class="down-arrow-icon"
-                                src="./public/images/down-arrow.svg"
-                                alt="Down-arrow-icon"
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
                               />
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
+                            </span>
                           </div>
-                          <div class="sub-wallets-wrapper">
-                            <div class="sub-wallet">
-                              <div class="row-content">
-                                <div class="wallet-info">
-                                  <span class="wallet-name">Wallet 1</span>
-                                  <span class="wallet-address"
-                                    >rDFX...ivmN</span
-                                  >
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="pnl-percent">+0,0%</span>
-                                </div>
-                                <div class="action-cell">
-                                  <div class="action-menu-wrapper">
-                                    <span class="action-menu-icon">
-                                      <img
-                                        src="./public/images/dot-icon.svg"
-                                        alt="more-icon"
-                                      />
-                                    </span>
-                                  </div>
-                                  <button class="trade-button">Trade</button>
-                                </div>
-                              </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+
+                      <!-- sub-wallets -->
+                      <div class="sub-wallets-wrapper">
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
                             </div>
-                            <div class="sub-wallet">
-                              <div class="row-content">
-                                <div class="wallet-info">
-                                  <span class="wallet-name">Wallet 1</span>
-                                  <span class="wallet-address"
-                                    >rDFX...ivmN</span
-                                  >
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="pnl-percent">+0,0%</span>
-                                </div>
-                                <div class="action-cell">
-                                  <div class="action-menu-wrapper">
-                                    <span class="action-menu-icon">
-                                      <img
-                                        src="./public/images/dot-icon.svg"
-                                        alt="more-icon"
-                                      />
-                                    </span>
-                                  </div>
-                                  <button class="trade-button">Trade</button>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="sub-wallet">
-                              <div class="row-content">
-                                <div class="wallet-info">
-                                  <span class="wallet-name">Wallet 1</span>
-                                  <span class="wallet-address"
-                                    >rDFX...ivmN</span
-                                  >
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="pnl-percent">+0,0%</span>
-                                </div>
-                                <div class="action-cell">
-                                  <div class="action-menu-wrapper">
-                                    <span class="action-menu-icon">
-                                      <img
-                                        src="./public/images/dot-icon.svg"
-                                        alt="more-icon"
-                                      />
-                                    </span>
-                                  </div>
-                                  <button class="trade-button">Trade</button>
-                                </div>
-                              </div>
-                            </div>
+                            <button class="trade-button">Trade</button>
                           </div>
                         </div>
-                      </td>
-                    </tr>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- sub-wallets -->
+                    </div>
 
                     <!-- Single Row -->
 
                     <!-- Single Row -->
-
-                    <tr>
-                      <td>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
                         <div class="token-cell">
                           <img
                             class="token-icon"
-                            src="./public/images/avatar-icon.svg"
+                            src="./public/images/token-icon.svg"
                             alt="Token-icon"
                           />
                           <span>TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="wallet-info">
-                              <span class="wallet-name">Wallet 1</span>
-                              <span class="wallet-address">rDFX...ivmN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
-                          </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
                         </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/avatar-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span>TOKEN</span>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="wallet-info">
-                              <span class="wallet-name">Wallet 1</span>
-                              <span class="wallet-address">rDFX...ivmN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
-                          </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
                         </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/avatar-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span>TOKEN</span>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="multi-wallet wallet-name">
-                              Multi (2)
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
                               <img
-                                class="down-arrow-icon"
-                                src="./public/images/down-arrow.svg"
-                                alt="Down-arrow-icon"
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
                               />
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
+                            </span>
                           </div>
-                          <div class="sub-wallets-wrapper">
-                            <div class="sub-wallet">
-                              <div class="row-content">
-                                <div class="wallet-info">
-                                  <span class="wallet-name">Wallet 1</span>
-                                  <span class="wallet-address"
-                                    >rDFX...ivmN</span
-                                  >
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="pnl-percent">+0,0%</span>
-                                </div>
-                                <div class="action-cell">
-                                  <div class="action-menu-wrapper">
-                                    <span class="action-menu-icon">
-                                      <img
-                                        src="./public/images/dot-icon.svg"
-                                        alt="more-icon"
-                                      />
-                                    </span>
-                                  </div>
-                                  <button class="trade-button">Trade</button>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="sub-wallet">
-                              <div class="row-content">
-                                <div class="wallet-info">
-                                  <span class="wallet-name">Wallet 1</span>
-                                  <span class="wallet-address"
-                                    >rDFX...ivmN</span
-                                  >
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="token-bought">0 TOKEN</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span
-                                  ><span class="pnl-percent">+0,0%</span>
-                                </div>
-                                <div class="action-cell">
-                                  <div class="action-menu-wrapper">
-                                    <span class="action-menu-icon">
-                                      <img
-                                        src="./public/images/dot-icon.svg"
-                                        alt="more-icon"
-                                      />
-                                    </span>
-                                  </div>
-                                  <button class="trade-button">Trade</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <button class="trade-button">Trade</button>
                         </div>
-                      </td>
-                    </tr>
-
+                      </div>
+                    </div>
                     <!-- Single Row -->
-
                     <!-- Single Row -->
-
-                    <tr>
-                      <td>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
                         <div class="token-cell">
                           <img
                             class="token-icon"
-                            src="./public/images/avatar-icon.svg"
+                            src="./public/images/token-icon.svg"
                             alt="Token-icon"
                           />
                           <span>TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="wallet-info">
-                              <span class="wallet-name">Wallet 1</span>
-                              <span class="wallet-address">rDFX...ivmN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
-                          </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
                         </div>
-                      </td>
-                    </tr>
-
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Single Row -->
 
                     <!-- Single Row -->
 
-                    <tr>
-                      <td>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
                         <div class="token-cell">
                           <img
                             class="token-icon"
-                            src="./public/images/avatar-icon.svg"
+                            src="./public/images/token-icon.svg"
                             alt="Token-icon"
                           />
                           <span>TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="wallet-info">
-                              <span class="wallet-name">Wallet 1</span>
-                              <span class="wallet-address">rDFX...ivmN</span>
+                        <div class="multi-wallet wallet-name">
+                          Multi (3)
+                          <img
+                            class="down-arrow-icon"
+                            src="./public/images/down-arrow.svg"
+                            alt="Down-arrow-icon"
+                          />
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+
+                      <!-- sub-wallets -->
+                      <div class="sub-wallets-wrapper">
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
                             </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
+                            <button class="trade-button">Trade</button>
                           </div>
                         </div>
-                      </td>
-                    </tr>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- sub-wallets -->
+                    </div>
 
                     <!-- Single Row -->
 
                     <!-- Single Row -->
-
-                    <tr>
-                      <td>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
                         <div class="token-cell">
                           <img
                             class="token-icon"
-                            src="./public/images/avatar-icon.svg"
+                            src="./public/images/token-icon.svg"
                             alt="Token-icon"
                           />
                           <span>TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="wallet-info">
-                              <span class="wallet-name">Wallet 1</span>
-                              <span class="wallet-address">rDFX...ivmN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
-                          </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
                         </div>
-                      </td>
-                    </tr>
-
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Single Row -->
 
                     <!-- Single Row -->
-
-                    <tr>
-                      <td>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
                         <div class="token-cell">
                           <img
                             class="token-icon"
-                            src="./public/images/avatar-icon.svg"
+                            src="./public/images/token-icon.svg"
                             alt="Token-icon"
                           />
                           <span>TOKEN</span>
                         </div>
-                      </td>
-                      <td class="col-span">
-                        <div>
-                          <div class="row-content">
-                            <div class="wallet-info">
-                              <span class="wallet-name">Wallet 1</span>
-                              <span class="wallet-address">rDFX...ivmN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="token-bought">0 TOKEN</span>
-                            </div>
-                            <div class="table-xrp-token-wrapper">
-                              <span class="xrp-bought">0 XRP</span
-                              ><span class="pnl-percent">+0,0%</span>
-                            </div>
-                            <div class="action-cell">
-                              <div class="action-menu-wrapper">
-                                <span class="action-menu-icon">
-                                  <img
-                                    src="./public/images/dot-icon.svg"
-                                    alt="more-icon"
-                                  />
-                                </span>
-                              </div>
-                              <button class="trade-button">Trade</button>
-                            </div>
-                          </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
                         </div>
-                      </td>
-                    </tr>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
 
                     <!-- Single Row -->
-                  </tbody>
-                </table>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+
+                    <!-- Single Row -->
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1916,35 +1884,5 @@
 
     <!-- Slick JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        var slider = $(".watchlist-slider");
-
-        slider.slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 4000,
-          infinite: true,
-          cssEase: "linear",
-          pauseOnHover: false,
-          draggable: true,
-          arrows: false,
-          dots: false,
-          variableWidth: true,
-        });
-
-        $(".watchlist-slider").on("mouseenter", function () {
-          $(".slick-track").css("transition", "none");
-          slider.slick("slickPause");
-        });
-
-        $(".watchlist-slider").on("mouseleave", function () {
-          $(".slick-track").css("transition", "transform 3s linear");
-          slider.slick("slickPlay");
-        });
-      });
-    </script>
   </body>
 </html>
