@@ -1280,7 +1280,7 @@ a {
   @media (max-width: 390px) {
     height: calc(100vh - 445px);
   }
-  @media (max-width: 420px) {
+  @media (min-width: 391px) and (max-width: 420px) {
     height: calc(100vh - 415px);
   }
   @media (min-width: 421px) and (max-width: 599px) {
