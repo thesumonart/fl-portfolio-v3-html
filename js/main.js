@@ -556,9 +556,9 @@ document.querySelectorAll("tr").forEach((tr) => {
     if (tr.classList.contains("buy")) {
       logo.src = "../public/images/xrp-logo-green.svg";
     } else if (tr.classList.contains("sell")) {
-      logo.src = "../public/images/xrp-logo-red.svg";
+      logo.src = "./public/images/xrp-logo-red.svg";
     } else {
-      logo.src = "../public/images/xrp-logo-green.svg";
+      logo.src = "./public/images/xrp-logo-green.svg";
     }
   });
 });
