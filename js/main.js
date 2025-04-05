@@ -554,7 +554,7 @@ document.querySelectorAll("tr").forEach((tr) => {
   const logos = tr.querySelectorAll(".table-xrp-logo");
   logos.forEach((logo) => {
     if (tr.classList.contains("buy")) {
-      logo.src = "../public/images/xrp-logo-green.svg";
+      logo.src = "./public/images/xrp-logo-green.svg";
     } else if (tr.classList.contains("sell")) {
       logo.src = "./public/images/xrp-logo-red.svg";
     } else {
