@@ -143,10 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
   actionMenu.style.display = "none";
 
   actionMenu.innerHTML = `
-                  <a class="tx-history-button" href="#">Tx History</a>
-                  <a class="share-button" href="#">Share</a>
-                  <a class="hide-button" href="#">Hide</a>
-                  <a class="burn-button" href="#">Burn</a>`;
+                  <a class="tx-history-button">Tx History</a>
+                  <a class="share-button" >Share</a>
+                  <a class="hide-button" >Hide</a>
+                  <a class="burn-button" >Burn</a>`;
 
   const actionMenuWrappers = document.querySelectorAll(".action-menu-wrapper");
   actionMenuWrappers.forEach((wrapper) => {
