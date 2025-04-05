@@ -1,32 +1,11 @@
 // Watchlist slider
 
-$(document).ready(function () {
-  var slider = $(".watchlist-slider");
-
-  slider.slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 4000,
-    infinite: true,
-    cssEase: "linear",
-    pauseOnHover: false,
-    draggable: true,
-    arrows: false,
-    dots: false,
-    variableWidth: true,
-  });
-
-  $(".watchlist-slider").on("mouseenter", function () {
-    $(".slick-track").css("transition", "none");
-    slider.slick("slickPause");
-  });
-
-  $(".watchlist-slider").on("mouseleave", function () {
-    $(".slick-track").css("transition", "transform 3s linear");
-    slider.slick("slickPlay");
-  });
+const watchlistSwiper = new Swiper(".watchlist-slider", {
+  slidesPerView: "auto",
+  freeMode: true,
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
 });
 
 // Watchlist slider
@@ -39,13 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeMenu = document.getElementById("closeMenu");
   const overlay = document.getElementById("sidebarOverlay");
 
-  // Function to open menu
   function openMenu() {
     sidebarMenu.classList.add("active");
     overlay.classList.add("active");
   }
 
-  // Function to close menu
   function closeSidebar() {
     sidebarMenu.classList.remove("active");
     overlay.classList.remove("active");
@@ -68,19 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
       buttons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
     });
-  });
-});
-
-// Watchlist items
-document.addEventListener("DOMContentLoaded", function () {
-  const marquee = document.querySelector(".marquee");
-
-  marquee.addEventListener("mouseenter", function () {
-    this.stop();
-  });
-
-  marquee.addEventListener("mouseleave", function () {
-    this.start();
   });
 });
 
@@ -108,7 +72,7 @@ document.querySelectorAll(".wallet-dropdown").forEach((dropdown) => {
   const walletOptions = dropdown.querySelector(".dropdown-options");
   const arrow = dropdown.querySelector(".arrow-icon");
   const selectedWalletOption = dropdown.querySelector(
-    "#selected-wallet-option"
+    ".selected-wallet-option"
   );
 
   const closeWalletDropdown = () => {
@@ -139,7 +103,6 @@ document.querySelectorAll(".wallet-dropdown").forEach((dropdown) => {
   });
 });
 
-// Close all dropdowns when clicking outside
 document.addEventListener("click", () => {
   document.querySelectorAll(".dropdown-options.show").forEach((dropdown) => {
     dropdown.classList.remove("show");
@@ -155,7 +118,6 @@ document.addEventListener("click", () => {
   });
 });
 
-// Prevent multiple dropdowns from opening
 const preventMultipleOpen = (currentDropdown) => {
   document.querySelectorAll(".dropdown-options.show").forEach((dropdown) => {
     if (dropdown !== currentDropdown) {
@@ -191,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.appendChild(actionMenu.cloneNode(true));
 
     wrapper.addEventListener("click", function (event) {
-      // Close any other open menus
       actionMenuWrappers.forEach((otherWrapper) => {
         if (otherWrapper !== wrapper) {
           const otherMenu = otherWrapper.querySelector(".action-menu");
@@ -205,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close the menu when clicking outside
   document.addEventListener("click", function (event) {
     actionMenuWrappers.forEach((wrapper) => {
       const menu = wrapper.querySelector(".action-menu");
@@ -227,8 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const sellButton = document.getElementById("sellButton");
   const amountInput = document.getElementById("amountInput");
   const quickActionButton = document.getElementById("quickActionButton");
-  const pnlBtnIcon = document.querySelector(".change-pnl-icon");
-  const pnlText = document.querySelector(".change-pnl");
   const firstInnerContent = document.querySelector(".first-inner-content");
   const secondInnerContent = document.querySelector(".second-inner-content");
   const seeTransactionText = document.querySelector(".see-transaction");
@@ -305,14 +263,16 @@ document.addEventListener("DOMContentLoaded", function () {
     tradeModalOverlay.classList.remove("active");
   }
 
-  //change text to pnl from 24h change
+  document.querySelectorAll(".change-pnl-icon").forEach((pnlBtn) => {
+    pnlBtn.addEventListener("click", () => {
+      const wrapper = pnlBtn.closest(".token-change");
+      const pnlText = wrapper?.querySelector(".change-pnl");
 
-  pnlBtnIcon.addEventListener("click", () => {
-    if (pnlText.innerText.toLowerCase() == "pnl") {
-      pnlText.innerText = "24h Change";
-    } else {
-      pnlText.innerText = "PnL";
-    }
+      if (!pnlText) return;
+
+      const currentText = pnlText.innerText.trim().toLowerCase();
+      pnlText.innerText = currentText === "pnl" ? "24H Change" : "PnL";
+    });
   });
 
   function openModal() {
@@ -402,7 +362,6 @@ document.addEventListener("DOMContentLoaded", function () {
     tradeButton.addEventListener("click", openModal);
   });
 
-  // Close modal when clicking outside
   tradeModalOverlay.addEventListener("click", function (event) {
     if (event.target === tradeModalOverlay) {
       closeModal();
@@ -447,11 +406,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Change button icon
     if (isEditMode) {
       presetCustomizeButton.classList.add("active");
       presetCustomizeButton.querySelector("img").src =
-        "./public/images/check-mark-white.svg"; // Change to tick icon
+        "./public/images/check-mark-white.svg";
       presetCustomizeButton.style.backgroundColor = "var(--bgBrandDefault)";
     } else {
       presetCustomizeButton.classList.remove("active");
@@ -471,112 +429,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const portfolioModalWalletDropdown = document.getElementById(
-    "portfolioModalWalletDropdown"
-  );
-  const modalWalletOptions = document.getElementById(
-    "portfolioModalWalletOptions"
-  );
-  const modalArrow = document.getElementById("modalWalletArrow");
-  const selectedWalletOption = document.getElementById(
-    "selected-modal-wallet-option"
-  );
-
-  if (portfolioModalWalletDropdown) {
-    portfolioModalWalletDropdown.addEventListener("click", function (event) {
-      event.stopPropagation();
-
-      if (modalWalletOptions) {
-        if (modalWalletOptions.style.display === "block") {
-          modalWalletOptions.style.display = "none";
-          modalWalletOptions.classList.remove("show");
-          if (modalArrow) modalArrow.classList.remove("open");
-        } else {
-          modalWalletOptions.style.display = "block";
-          modalWalletOptions.classList.add("show");
-          if (modalArrow) modalArrow.classList.add("open");
-        }
-      }
-    });
-  }
-
-  function selectWalletOption(walletName) {
-    if (selectedWalletOption) {
-      selectedWalletOption.textContent = walletName;
-    }
-
-    if (modalWalletOptions) {
-      modalWalletOptions.style.display = "none";
-      modalWalletOptions.classList.remove("show");
-      if (modalArrow) modalArrow.classList.remove("open");
-    }
-  }
-
-  if (modalWalletOptions) {
-    modalWalletOptions.addEventListener("click", function (event) {
-      event.stopPropagation();
-
-      if (event.target.type === "checkbox") {
-        const checkboxes = this.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach((checkbox) => {
-          checkbox.checked = false;
-        });
-
-        event.target.checked = true;
-
-        // Update selected text with wallet name
-        const walletName = event.target
-          .closest(".option")
-          ?.querySelector(".wallet-name");
-        if (walletName) {
-          selectWalletOption(walletName.textContent);
-        }
-      }
-    });
-  }
-
   const slippageInput = document.querySelector(".slippage-input");
 
   slippageInput.addEventListener("blur", function () {
     let value = this.value.trim();
 
-    // Check if the value is a valid number and doesn't already have a percentage
     if (value !== "" && !value.includes("%")) {
       this.value = value + "%";
     }
   });
 
   slippageInput.addEventListener("focus", function () {
-    // Remove % sign when editing
     this.value = this.value.replace("%", "");
   });
 
-  // Close dropdown when clicking outside
-  document.addEventListener("click", function (event) {
-    if (
-      portfolioModalWalletDropdown &&
-      !portfolioModalWalletDropdown.contains(event.target)
-    ) {
-      if (modalWalletOptions) {
-        modalWalletOptions.style.display = "none";
-        modalWalletOptions.classList.remove("show");
-      }
-      if (modalArrow) {
-        modalArrow.classList.remove("open");
-      }
-    }
-  });
-
-  // Function to toggle sub-wallet visibility and rotate the arrow icon
   function toggleSubWallets(tr) {
     const subWalletsWrapper = tr.querySelector(".sub-wallets-wrapper");
     const downArrowIcon = tr.querySelector(".down-arrow-icon");
 
     if (subWalletsWrapper) {
-      // Toggle visibility of the sub-wallet
       subWalletsWrapper.classList.toggle("visible");
 
-      // Rotate the arrow icon based on visibility
       if (subWalletsWrapper.classList.contains("visible")) {
         downArrowIcon.style.transform = "rotate(180deg)";
       } else {
@@ -585,56 +458,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Set up event listeners for both mobile and desktop interactions
   function setupInteractions() {
     const isMobile = window.innerWidth < 420;
-    // For screens smaller than 420px (mobile), allow both <tr> and .multi-wallet clicks
+
     if (isMobile) {
       document.querySelectorAll(".table-row-wrapper").forEach((tr) => {
         tr.addEventListener("click", function (event) {
-          // Handle <tr> row click for toggling sub-wallets
           const subWalletsWrapper = this.querySelector(".sub-wallets-wrapper");
           if (subWalletsWrapper) {
             toggleSubWallets(this);
           } else {
-            // Open trade modal if no sub-wallet exists
             openModal();
           }
         });
       });
     } else {
-      // For screens wider than 420px, remove <tr> event listeners
       document.querySelectorAll("tr").forEach((tr) => {
         tr.removeEventListener("click", function () {});
       });
     }
 
-    // Attach event listener to .multi-wallet for both mobile and desktop
     document.querySelectorAll(".multi-wallet").forEach((multiWallet) => {
       multiWallet.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent triggering row click event
+        event.stopPropagation();
         toggleSubWallets(this.closest(".table-row-wrapper"));
       });
     });
 
     if (isMobile) {
-      // Attach event listener to .sub-wallet for opening the modal
       document.querySelectorAll(".sub-wallet").forEach((subWallet) => {
         subWallet.addEventListener("click", function (event) {
-          event.stopPropagation(); // Prevent triggering row click event
-          openModal(); // Open the modal when clicking on .sub-wallet
+          event.stopPropagation();
+          openModal();
         });
       });
     }
   }
 
-  // Call the function to set up interactions
   setupInteractions();
 
-  // Initialize with buy mode
   setMode("buy");
 
-  // Make functions available globally
   window.openModal = openModal;
   window.closeModal = closeModal;
   window.setMode = setMode;
@@ -662,7 +526,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// Close share modal when clicking the close button
 document.querySelectorAll(".close-share-modal").forEach((closeModalBtn) => {
   closeModalBtn.addEventListener("click", () => {
     modal.style.display = "none";
@@ -678,13 +541,26 @@ const historyModal = document.querySelector(".history-modal-overlay");
 
 document.addEventListener("DOMContentLoaded", function () {
   document
-    .querySelectorAll(".tx-history-button, #tradeHistoryBtn")
+    .querySelectorAll(".tx-history-button, .tradeHistoryBtn")
     .forEach((openModalButton) => {
       openModalButton.addEventListener("click", () => {
         historyModal.style.display = "flex";
         document.body.style.overflow = "hidden";
       });
     });
+});
+
+document.querySelectorAll("tr").forEach((tr) => {
+  const logos = tr.querySelectorAll(".table-xrp-logo");
+  logos.forEach((logo) => {
+    if (tr.classList.contains("buy")) {
+      logo.src = "../public/images/xrp-logo-green.svg";
+    } else if (tr.classList.contains("sell")) {
+      logo.src = "../public/images/xrp-logo-red.svg";
+    } else {
+      logo.src = "../public/images/xrp-logo-green.svg";
+    }
+  });
 });
 
 document.querySelectorAll(".close-button").forEach((closeModalBtn) => {
