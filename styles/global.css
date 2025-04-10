@@ -617,7 +617,7 @@ a {
       color: var(--textDefaultPrimary);
       font-family: var(--fontGothamUltra);
 
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         font-size: 28px;
       }
 
@@ -628,7 +628,7 @@ a {
           width: 32px;
           aspect-ratio: 1/1;
 
-          @media (max-width: 420px) {
+          @media (max-width: 767px) {
             width: 24px;
           }
         }
@@ -640,7 +640,7 @@ a {
       font-size: 16px;
       line-height: 1.2em;
 
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         font-size: 14px;
       }
     }
@@ -652,7 +652,7 @@ a {
     flex-direction: column;
     gap: 8px;
 
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       padding-bottom: 0;
     }
 
@@ -685,7 +685,7 @@ a {
         font-weight: 600;
         line-height: 1.2em;
 
-        @media (max-width: 420px) {
+        @media (max-width: 767px) {
           font-size: 28px;
         }
       }
@@ -741,6 +741,7 @@ a {
     color: var(--textDefaultPrimary);
     gap: 8px;
     display: none;
+    margin-top: 8px;
 
     @media (min-width: 421px) and (max-width: 768px) {
       display: flex !important;
@@ -957,7 +958,7 @@ a {
           width: 18px;
           aspect-ratio: 1;
 
-          @media (max-width: 420px) {
+          @media (max-width: 767px) {
             width: 16px;
           }
         }
@@ -1193,9 +1194,10 @@ a {
     overflow: hidden;
 
     .search-input-box {
-      padding: 12px 40px 12px 16px;
+      padding: 0 40px 0 16px;
       border-radius: 9999px;
       width: 100%;
+      height: 32px;
       border: 1px solid var(--borderDefaultPrimary);
       background: var(--bgDefaultPrimary);
       outline: none;
@@ -1265,23 +1267,23 @@ a {
 /* Table section CSS starts here */
 
 .main-table-section {
-  height: calc(100vh - 405px);
+  height: calc(100vh - 390px);
   overflow-y: auto;
 
   @media (max-width: 390px) {
-    height: calc(100vh - 485px);
+    height: calc(100vh - 470px);
   }
   @media (min-width: 391px) and (max-width: 420px) {
-    height: calc(100vh - 455px);
+    height: calc(100vh - 435px);
   }
   @media (min-width: 421px) and (max-width: 599px) {
-    height: calc(100vh - 510px);
+    height: calc(100vh - 475px);
   }
-  @media (min-width: 600px) and (max-width: 692px) {
-    height: calc(100vh - 518px);
+  @media (min-width: 600px) and (max-width: 767px) {
+    height: calc(100vh - 485px);
   }
-  @media (min-width: 693px) and (max-width: 768px) {
-    height: calc(100vh - 518px);
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: calc(100vh - 385px);
   }
 
   &::-webkit-scrollbar {
@@ -1308,7 +1310,7 @@ a {
     width: 100%;
     border-collapse: collapse;
 
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       min-width: unset;
     }
   }
@@ -1338,7 +1340,7 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 0.5px solid var(--borderDefaultPrimary);
 
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
 
       > span {
@@ -1391,7 +1393,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 4px;
 
@@ -1437,7 +1439,7 @@ a {
     border-radius: 10px;
     object-fit: cover;
 
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       width: 32px;
     }
   }
@@ -1751,7 +1753,7 @@ a {
   .history-button,
   .resize-button {
     display: none;
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       display: flex;
     }
   }
@@ -1932,7 +1934,7 @@ a {
           border-bottom-left-radius: 10px;
         }
 
-        @media (max-width: 420px) {
+        @media (max-width: 767px) {
           font-size: 14px;
         }
       }
@@ -1958,7 +1960,7 @@ a {
           text-align: center;
         }
 
-        @media (max-width: 420px) {
+        @media (max-width: 767px) {
           max-width: 40px;
           font-size: 14px;
         }
@@ -2014,7 +2016,7 @@ a {
     gap: 2px;
     font-size: 14px;
 
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       font-size: 12px;
     }
 
@@ -2133,7 +2135,7 @@ a {
           color: var(--textDefaultPrimary);
         }
 
-        @media (max-width: 420px) {
+        @media (max-width: 767px) {
           max-width: 50px;
         }
       }
@@ -2267,7 +2269,7 @@ a {
       align-items: center;
       gap: 8px;
 
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         font-size: 14px;
       }
     }
@@ -2285,7 +2287,7 @@ a {
         line-height: 1em;
         color: var(--textDefaultPrimary);
 
-        @media (max-width: 420px) {
+        @media (max-width: 767px) {
           font-size: 20px;
         }
       }
@@ -2296,12 +2298,12 @@ a {
         line-height: 1.2em;
         color: var(--textDefaultTertiary);
 
-        @media (max-width: 420px) {
+        @media (max-width: 767px) {
           font-size: 12px;
         }
       }
 
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         margin-bottom: 12px;
       }
     }
@@ -2335,7 +2337,7 @@ a {
         position: relative;
       }
 
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         font-size: 14px;
       }
     }
@@ -2377,7 +2379,7 @@ a {
         }
       }
 
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         font-size: 14px;
       }
     }
@@ -2387,11 +2389,12 @@ a {
 .trade-modal-overlay.active {
   display: flex;
 
-  @media (max-width: 420px) {
+  @media (max-width: 767px) {
     align-items: end;
     padding: 0;
     .modal {
-      width: 100vw;
+      width: 100%;
+      max-width: unset;
       border-radius: 10px 10px 0 0;
     }
   }
@@ -2622,7 +2625,7 @@ a {
   align-items: center;
   z-index: 99;
 
-  @media (max-width: 420px) {
+  @media (max-width: 767px) {
     align-items: end;
     padding: 0 !important;
 
@@ -2798,7 +2801,7 @@ a {
   .history-button,
   .back-button {
     display: none;
-    @media (max-width: 420px) {
+    @media (max-width: 767px) {
       display: flex;
     }
   }
@@ -3015,10 +3018,13 @@ a {
 
     .table-wrapper {
       max-height: calc(90vh - 225px);
-      max-width: calc(90vw);
       overflow: auto;
       -ms-overflow-style: none;
       scrollbar-width: none;
+
+      @media (min-width: 768px) {
+        max-width: calc(90vw);
+      }
     }
 
     .table-wrapper::-webkit-scrollbar {

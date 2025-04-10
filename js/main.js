@@ -459,7 +459,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setupInteractions() {
-    const isMobile = window.innerWidth < 420;
+    const isMobile = window.innerWidth < 768;
 
     if (isMobile) {
       document.querySelectorAll(".table-row-wrapper").forEach((tr) => {
