@@ -550,6 +550,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const closeHistoryModal = () => {
+  historyModal.style.display = "none";
+};
+
+document
+  .querySelectorAll(".history-modal-close-btn, .history-modal-back-btn")
+  .forEach((button) => {
+    button.addEventListener("click", () => {
+      closeHistoryModal();
+    });
+  });
+
 document.querySelectorAll("tr").forEach((tr) => {
   const logos = tr.querySelectorAll(".table-xrp-logo");
   logos.forEach((logo) => {

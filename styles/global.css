@@ -417,10 +417,6 @@ a {
   padding: 5px 12px;
   border-bottom: 0.5px solid var(--borderDefaultPrimary);
 
-  @media (max-width: 692px) {
-    display: none;
-  }
-
   .watchlist-bar-contents-wrapper {
     display: flex;
     align-items: center;
@@ -1273,16 +1269,16 @@ a {
   overflow-y: auto;
 
   @media (max-width: 390px) {
-    height: calc(100vh - 445px);
+    height: calc(100vh - 485px);
   }
   @media (min-width: 391px) and (max-width: 420px) {
-    height: calc(100vh - 415px);
+    height: calc(100vh - 455px);
   }
   @media (min-width: 421px) and (max-width: 599px) {
-    height: calc(100vh - 470px);
+    height: calc(100vh - 510px);
   }
   @media (min-width: 600px) and (max-width: 692px) {
-    height: calc(100vh - 480px);
+    height: calc(100vh - 518px);
   }
   @media (min-width: 693px) and (max-width: 768px) {
     height: calc(100vh - 518px);
@@ -2776,8 +2772,7 @@ a {
     }
   }
   .close-button,
-  .history-button,
-  .resize-button {
+  .back-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2787,10 +2782,19 @@ a {
     border-radius: 10px;
     cursor: pointer;
     border: 1px solid transparent;
+    flex-shrink: 0;
+    img {
+      width: 20px;
+    }
+    &.back-button {
+      img {
+        transform: rotate(90deg);
+      }
+    }
   }
 
   .history-button,
-  .resize-button {
+  .back-button {
     display: none;
     @media (max-width: 420px) {
       display: flex;
