@@ -2629,6 +2629,8 @@ a {
     .modal {
       max-width: 100vw !important;
       border-radius: 10px 10px 0 0 !important;
+      padding: 16px !important;
+      padding-bottom: 8px !important;
     }
   }
 
