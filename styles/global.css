@@ -88,7 +88,7 @@ input {
 /* Global styles */
 
 .container {
-  max-width: 1420px;
+  /* max-width: 1420px; */
   width: 100%;
   margin: 0 auto;
 }
@@ -139,7 +139,7 @@ a {
   }
 
   .nav-items-wrapper {
-    max-width: 1420px;
+    /* max-width: 1420px; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -594,7 +594,7 @@ a {
 
 /* Portfolio Header CSS starts here */
 .portfolio-header {
-  padding: 16px 12px;
+  padding: 16px 32px;
   border-bottom: 0.5px solid var(--borderDefaultPrimary);
 
   @media (min-width: 693px) and (max-width: 1440px) {
@@ -881,7 +881,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px 32px;
 
   .controls {
     display: flex;
@@ -1336,7 +1336,8 @@ a {
 
   .table-heading {
     display: grid;
-    padding: 7.5px calc((100vw - 1420px) / 2);
+    /* padding: 7.5px calc((100vw - 1420px) / 2); */
+    padding: 7.5px 32px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 0.5px solid var(--borderDefaultPrimary);
 
@@ -1389,7 +1390,8 @@ a {
   }
 
   .table-row {
-    padding: 9px calc((100% - 1420px) / 2);
+    /* padding: 9px calc((100% - 1420px) / 2); */
+    padding: 9px 32px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
