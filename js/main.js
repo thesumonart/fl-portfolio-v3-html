@@ -2,10 +2,10 @@
 
 const watchlistSwiper = new Swiper(".watchlist-slider", {
   slidesPerView: "auto",
-  freeMode: true,
   grabCursor: true,
   loop: true,
-  centeredSlides: true,
+  freeMode: true,
+  mousewheel: true,
 });
 
 // Watchlist slider
