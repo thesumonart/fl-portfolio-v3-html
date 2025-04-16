@@ -709,6 +709,7 @@ a {
       gap: 8px;
       width: -webkit-fill-available;
     }
+
     .second-col-cards {
       display: grid;
       grid-template-columns: 2fr 1fr;
