@@ -48,25 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Customize Dropdown
-const portfolioCustomizeDropdown = document.getElementById(
-  "portfolioCustomizeDropdown"
-);
-const customizeOptions = document.getElementById("portfolioCustomizeOptions");
-const customizeArrow = document.getElementById("portfolioCustomizeArrow");
-
-const closeCustomizeDropdown = () => {
-  customizeOptions.classList.remove("show");
-  customizeArrow.classList.remove("open");
-};
-
-portfolioCustomizeDropdown.addEventListener("click", (e) => {
-  e.stopPropagation();
-  preventMultipleOpen(customizeOptions);
-  customizeOptions.classList.toggle("show");
-  customizeArrow.classList.toggle("open");
-});
-
 // Wallet Dropdown
 document.querySelectorAll(".wallet-dropdown").forEach((dropdown) => {
   const walletOptions = dropdown.querySelector(".dropdown-options");
@@ -590,5 +571,105 @@ window.addEventListener("click", (e) => {
 });
 
 // History Modal
+
+// Customize Modal
+
+// wallet selection
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".wallet-option").forEach((option) => {
+    const input = option.querySelector(".view-input");
+
+    if (input.checked) {
+      option.classList.add("checked");
+    } else {
+      option.classList.remove("checked");
+    }
+
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        option.classList.add("checked");
+      } else {
+        option.classList.remove("checked");
+      }
+
+      const isAllWallet = option.classList.contains("all-wallet");
+      const allWalletInput = document.querySelector(".all-wallet .view-input");
+
+      if (isAllWallet && input.checked) {
+        document
+          .querySelectorAll(".wallet-option:not(.all-wallet)")
+          .forEach((opt) => {
+            const inp = opt.querySelector(".view-input");
+            inp.checked = false;
+            opt.classList.remove("checked");
+          });
+      } else if (!isAllWallet && input.checked) {
+        allWalletInput.checked = false;
+        document
+          .querySelector(".wallet-option.all-wallet")
+          .classList.remove("checked");
+      }
+    });
+  });
+});
+
+// wallet selection
+
+// Filters selection
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".filter-option").forEach((option) => {
+    const input = option.querySelector(".view-input");
+
+    if (input.checked) {
+      option.classList.add("checked");
+    } else {
+      option.classList.remove("checked");
+    }
+
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        option.classList.add("checked");
+      } else {
+        option.classList.remove("checked");
+      }
+    });
+  });
+});
+
+// Filters selection
+
+// Modal open & close
+document.addEventListener("DOMContentLoaded", () => {
+  const portfolioCustomizeBtn = document.querySelector(
+    ".portfolio-customize-btn"
+  );
+  const portfolioCustomizeModal = document.querySelector(
+    ".customize-modal-overlay"
+  );
+  const pCustModalCloseBtn = document.querySelector(".customize-modal-close");
+
+  if (portfolioCustomizeBtn && portfolioCustomizeModal && pCustModalCloseBtn) {
+    portfolioCustomizeBtn.addEventListener("click", () => {
+      portfolioCustomizeModal.classList.add("active");
+    });
+
+    pCustModalCloseBtn.addEventListener("click", () => {
+      portfolioCustomizeModal.classList.remove("active");
+    });
+
+    portfolioCustomizeModal.addEventListener("click", (event) => {
+      if (event.target === portfolioCustomizeModal) {
+        portfolioCustomizeModal.classList.remove("active");
+      }
+    });
+  } else {
+    console.warn("Modal elements not found in DOM.");
+  }
+});
+// Modal open & close
+
+// Customize Modal
 
 // Modals

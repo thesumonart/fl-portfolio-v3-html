@@ -36,7 +36,9 @@
   --bgDefaultPrimary: #13131b;
   --bgDefaultPrimaryHov: #181924;
   --bgDefaultSecondary: #242534;
+  --bgAccentDefault: #14b8a6;
   --bgAccentTertiary: #115e59;
+  --bgNeutralSecondary: #434343;
   --bgPositiveDefault: #008043;
   --bgPositiveSecondary: #02542d;
   --bgDangerDefault: #f03330;
@@ -925,7 +927,7 @@ a {
 
     /* Customize Dropdown Button */
 
-    .customize-dropdown {
+    .portfolio-customize-btn {
       position: relative;
       max-width: 155px;
       width: 100%;
@@ -963,81 +965,6 @@ a {
             width: 16px;
           }
         }
-      }
-
-      .arrow-icon {
-        @media (max-width: 692px) {
-          display: none;
-        }
-      }
-
-      .arrow-icon.open {
-        transform: rotate(180deg);
-      }
-
-      .dropdown-options {
-        display: none;
-        position: absolute;
-        top: calc(100% + 4px);
-        left: 0;
-        width: auto;
-        border: 1px solid var(--borderDefaultSecondary);
-        border-radius: 12px;
-        background: var(--bgDefaultSecondary);
-        flex-direction: column;
-      }
-
-      .dropdown-options.show {
-        display: flex;
-      }
-
-      .option {
-        padding: 12px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .wallet-name-address {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .wallet-address {
-        color: var(--textDefaultTertiary);
-      }
-
-      .option input[type="checkbox"] {
-        appearance: none;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #1f3ccd;
-        border-radius: 4px;
-        position: relative;
-        margin-right: 5px;
-        cursor: pointer;
-      }
-
-      .option input[type="checkbox"]:checked {
-        background-color: var(--bgBrandDefault);
-        border: none;
-      }
-
-      .option input[type="checkbox"]:checked::after {
-        content: "";
-        background: url("../public/images/check-mark.svg");
-        background-size: 75%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        font-size: 12px;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-
-      @media (max-width: 692px) {
-        height: 32px;
-        width: fit-content;
       }
     }
 
@@ -3064,7 +2991,297 @@ a {
 
 /* History Modal */
 
+/* Customize modal */
+
+.customize-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    align-items: self-end;
+    justify-content: center;
+  }
+
+  .customize-modal {
+    background: var(--bgDefaultSecondary);
+    border: 1px solid var(--borderDefaultSecondary);
+    overflow: clip;
+    max-width: 450px;
+    border-radius: 10px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      border-radius: 10px 10px 0 0;
+      max-width: 100%;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px;
+      font-size: 16px;
+      color: var(--textDefaultPrimary);
+      background: var(--bgDefaultPrimaryHov);
+
+      .close-icon {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        background: transparent;
+        border: 1px solid var(--borderDefaultSecondary);
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        img {
+          aspect-ratio: 1/1;
+        }
+
+        &:hover {
+          background: var(--bgDefaultSecondary);
+        }
+      }
+    }
+
+    .modal-contents-wrapper {
+      padding: 0 12px;
+      .heading {
+        font-size: 14px;
+        line-height: 1.2em;
+        color: var(--textDefaultPrimary);
+      }
+
+      .wallets-options {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .wallets-wrapper {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 6px;
+
+          @media (max-width: 768px) {
+            flex-direction: row;
+            gap: 6px;
+          }
+
+          .wallet-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            width: fit-content;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.2em;
+            color: var(--textDefaultPrimary);
+            user-select: none;
+            padding: 7.5px 8px;
+
+            @media (max-width: 768px) {
+              background: var(--bgNeutralSecondary);
+              &.all-wallet {
+                background: var(--bgAccentTertiary);
+
+                &.checked {
+                  background: var(--bgAccentDefault);
+                  .check-icon-wrapper {
+                    background: transparent;
+                  }
+                }
+              }
+            }
+
+            &.checked {
+              .check-icon-wrapper {
+                background: var(--bgBrandDefault);
+                svg {
+                  display: block;
+                  path {
+                    stroke: var(--textNeutralDefault);
+                  }
+                }
+              }
+
+              @media (max-width: 768px) {
+                background: var(--bgBrandDefault);
+                flex-direction: row-reverse;
+
+                .wallet-inner-contents {
+                  display: flex;
+                }
+              }
+            }
+          }
+
+          .wallet-inner-contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .check-icon-wrapper {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            background: var(--bgDefaultPrimary);
+            border: 1px solid var(--borderBrandTertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              display: none;
+            }
+
+            svg path {
+              stroke: #0e0f43;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .wallet-inner-contents {
+              display: none;
+            }
+
+            .check-icon-wrapper {
+              border: none;
+              background: none;
+            }
+          }
+
+          .wallet-name-n-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+      }
+
+      .filter-options {
+        border-top: 1px solid var(--borderDefaultSecondary);
+        padding: 12px 0 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .filters-wrapper {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 6px;
+
+          @media (max-width: 768px) {
+            flex-direction: row;
+            gap: 6px;
+          }
+
+          .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            width: fit-content;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.2em;
+            color: var(--textDefaultPrimary);
+            user-select: none;
+            padding: 7.5px 8px;
+
+            @media (max-width: 768px) {
+              background: var(--bgNeutralSecondary);
+            }
+
+            &.checked {
+              .check-icon-wrapper {
+                background: var(--bgBrandDefault);
+                svg {
+                  display: block;
+                  path {
+                    stroke: var(--textNeutralDefault);
+                  }
+                }
+              }
+
+              @media (max-width: 768px) {
+                background: var(--bgBrandDefault);
+                flex-direction: row-reverse;
+
+                .filter-inner-contents {
+                  display: flex;
+                }
+              }
+            }
+          }
+
+          .filter-inner-contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .check-icon-wrapper {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            background: var(--bgDefaultPrimary);
+            border: 1px solid var(--borderBrandTertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              display: none;
+            }
+
+            svg path {
+              stroke: #0e0f43;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .filter-inner-contents {
+              display: none;
+            }
+
+            .check-icon-wrapper {
+              border: none;
+              background: none;
+            }
+          }
+
+          .filter-name {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Customize modal */
+
 /* Modals */
+
 @keyframes loading-rotate {
   0% {
     transform: rotate(0deg);

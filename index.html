@@ -664,7 +664,7 @@
               <div class="controls">
                 <!-- Customize Dropdown Button -->
 
-                <div class="customize-dropdown" id="portfolioCustomizeDropdown">
+                <div class="portfolio-customize-btn">
                   <span class="settings-icon"
                     ><img
                       src="./public/images/sliders-icon.svg"
@@ -678,27 +678,6 @@
                       src="./public/images/chevron-down-icon.svg"
                       alt="arrow-icon"
                   /></span>
-
-                  <div class="dropdown-options" id="portfolioCustomizeOptions">
-                    <label class="option"
-                      ><input type="checkbox" value="Values in USD" />Values in
-                      USD</label
-                    >
-                    <label class="option"
-                      ><input type="checkbox" value="Show Best Pools" />Show
-                      Best Pools</label
-                    >
-                    <label class="option"
-                      ><input type="checkbox" value="Show Eligible Pools" />Show
-                      Eligible Pools</label
-                    >
-                    <label class="option"
-                      ><input
-                        type="checkbox"
-                        value="Show Closed Positions"
-                      />Show Closed Positions</label
-                    >
-                  </div>
                 </div>
 
                 <!-- Customize Dropdown Button -->
@@ -2484,6 +2463,285 @@
       </div>
 
       <!-- History Modal -->
+
+      <!-- Customize Modal -->
+
+      <div class="customize-modal-overlay">
+        <div class="customize-modal">
+          <div class="modal-header">
+            <p class="modal-heading">Customize</p>
+            <figure class="close-icon customize-modal-close">
+              <img src="./public//images/close-icon.svg" alt="close-icon" />
+            </figure>
+          </div>
+          <div class="modal-contents-wrapper">
+            <div class="wallets-options">
+              <p class="heading">Wallets</p>
+              <div class="wallets-wrapper">
+                <label class="wallet-option all-wallet">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden checked />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <p>All Wallets</p>
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-1.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 1</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-2.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 2</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-3.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 3</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-4.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 4</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-5.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 5</span
+                  >
+                </label>
+              </div>
+            </div>
+            <div class="filter-options">
+              <p class="heading">Filters</p>
+              <div class="filters-wrapper">
+                <label class="filter-option">
+                  <div class="filter-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="filter-name"> Hide Dust</span>
+                </label>
+                <label class="filter-option">
+                  <div class="filter-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="filter-name"> Show Hidden</span>
+                </label>
+                <label class="filter-option">
+                  <div class="filter-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="filter-name"> Price in USD</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customize Modal -->
 
       <!-- Modals -->
     </main>
